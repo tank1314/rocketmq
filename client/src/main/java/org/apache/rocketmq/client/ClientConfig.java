@@ -30,7 +30,7 @@ public class ClientConfig {
     private String namesrvAddr = System.getProperty(MixAll.NAMESRV_ADDR_PROPERTY, System.getenv(MixAll.NAMESRV_ADDR_ENV));
     private String clientIP = RemotingUtil.getLocalAddress();
     private String instanceName = System.getProperty("rocketmq.client.name", "DEFAULT");
-    private int clientCallbackExecutorThreads = Runtime.getRuntime().availableProcessors();
+    private int clientCallbackExecutorThreads = 8; //Runtime.getRuntime().availableProcessors()
     /**
      * Pulling topic information interval from the named server
      */
